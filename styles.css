@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  text-align: center;
+  font-family: Courier;
+  
+}
+
+h1 {
+  font-family: Courier;
+  color: green;
+  opacity: 0.5
+  text-align: center;
+}
+h2 {
+  font-family: Courier;
+  color:red;
+  opacity: 0.5
+  text-align: center;
+}
+
+p {
+  font-family: Courier;
+  color: green;
+  font-size: 20px;
+  opacity: 0.5
+  text-align: center;
+}
+
+#para1 {
+  text-align: center;
+  font-family: Courier;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#qst {
+  text-align: center;
+  font-family: Courier;
+  color: green;
+  font-size: 18px;
+  font-weight: bold
+}
