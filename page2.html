@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-9">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gifts!!!</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <head />
+
+<body>
+  <h1>Website Says</h1>
+  <br>
+  <h2>Guess the memory</h2>
+  <br>
+
+  <p>??????</p>
+  <p style="font-size: 24px;" id="qst">Question here</p>
+  <p>?????</p>
+
+  <form onclick="verify()">
+    <select id="ppl" name="ppl">
+      <option value="Aarohi Place">Aarohi Place</option>
+      <option value="2 player game">2 player game</option>
+      <option value="Tossing" selected>Tossing</option>
+      <option value="Seimens area">Seimens area</option>
+      <option value="Mr. DIY">Mr. DIY</option>
+      <option value="Ukulele">Ukulele</option>
+      <option value="All blue blue">All blue blue</option>
+      <option value="Ra-Men">Ra-Men</option>
+    </select>
+  </form>
+
+
+  <br>
+  <img id="dispImage" src='/pictures/qm.webp' style="Width:650px">
+
+
+  <p id="messageShow"></p>
+
+  <script>
+    let cqn = 0;
+    let questions = [
+      {
+        person: 'Ra-Men',
+        question: 'Something we cooked together',
+        image: '/pictures/3.jpg',
+        message: '2 cute bowls for 2 cute people'
+      },
+      {
+        person: 'Seimens area',
+        question: 'Where we ate the best rice',
+        image: '/pictures/1.jpg',
+        message: 'The early dating days..'
+      },
+      {
+        person: 'Ukulele',
+        question: 'I cant help falling in love with you!',
+        image: '/pictures/4.jpg',
+        message: 'Oh the after sex melodies'
+      },
+      {
+        person: 'Tossing',
+        question: 'This is what resides in my wallet',
+        image: '/pictures/2.jpg',
+        message: 'Always there with me'
+      },
+      {
+        person: '2 player game',
+        question: 'How do we know that, you are better at maths than me?',
+        image: '/pictures/7.jpg',
+        message: 'My competitive Girlfriend 🤓'
+      },
+      {
+        person: 'Mr. DIY',
+        question: 'Where you posed with silly hat',
+        image: '/pictures/8.jpg',
+        message: 'And the public fingering hmmmmmmmm'
+      },
+      {
+        person: 'Aarohi Place',
+        question: 'Where I go for WFH?',
+        image: '/pictures/6.jpg',
+        message: 'Our last photo together 😢'
+      },
+      {
+        person: '',
+        question: 'HERE IS YOUR CAKE',
+        image: '/pictures/cake.jpg',
+        message: 'HAPPY BIRTHDAY !!!'
+      }
+    ]
+
+    document.getElementById("qst").innerHTML = questions[cqn].question;
+
+    function verify() {
+      let subans = document.getElementById("ppl");
+      console.log(subans.value);
+      if (subans.value == questions[cqn].person) {
+        document.getElementById('dispImage').src = questions[cqn].image
+        document.getElementById('messageShow').innerHTML = questions[cqn].message
+        console.log(questions[cqn].image)
+        cqn++
+        document.getElementById("qst").innerHTML = questions[cqn].question;
+        if (questions[cqn].question == 'HERE IS YOUR CAKE') {
+          document.getElementById('dispImage').src = questions[cqn].image
+          document.getElementById('messageShow').innerHTML = questions[cqn].message
+        }
+      }
+    }
+  </script>
+
+  <body />
+  <html>
