@@ -29,6 +29,7 @@
       <option value="Ukulele">Ukulele</option>
       <option value="All blue blue">All blue blue</option>
       <option value="Ra-Men">Ra-Men</option>
+      <option value="Give me cake!!!">Give me cake!!!</option>
     </select>
   </form>
 
@@ -85,8 +86,14 @@
         message: 'Our last photo together 😢'
       },
       {
-        person: '',
-        question: 'HERE IS YOUR CAKE',
+        person: 'All blue blue',
+        question: 'Where do I Stalk you?',
+        image: '/pictures/5.jpg',
+        message: 'iPhone Testing'
+      },
+      {
+        person: 'Give me cake!!!',
+        question: 'Claim your cake',
         image: '/pictures/cake.jpg',
         message: 'HAPPY BIRTHDAY !!!'
       }
@@ -103,10 +110,6 @@
         console.log(questions[cqn].image)
         cqn++
         document.getElementById("qst").innerHTML = questions[cqn].question;
-        if (questions[cqn].question == 'HERE IS YOUR CAKE') {
-          document.getElementById('dispImage').src = questions[cqn].image
-          document.getElementById('messageShow').innerHTML = questions[cqn].message
-        }
       }
     }
   </script>
